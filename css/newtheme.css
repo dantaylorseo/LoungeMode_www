@@ -1,0 +1,419 @@
+@font-face {
+    font-family: 'scoreboard';
+    src: url('../fonts/scoreboard-webfont.eot');
+    src: url('../fonts/scoreboard-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/scoreboard-webfont.woff') format('woff'),
+    url('../fonts/scoreboard-webfont.ttf') format('truetype'),
+    url('../fonts/scoreboard-webfont.svg#score_boardregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+body {
+    background-color: #333;
+    background-image: url(../images/1.jpg);
+    background-repeat: repeat;
+    
+}
+.ui-content {
+    padding: 0em;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.ui-header {
+    background-color: #C22320;
+}
+
+.ui-header h1 img {
+    height: 26px;
+}
+
+.ui-content h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom:0.5em;
+}
+
+.ui-content h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.ui-content p {
+    color: #fff;
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+.ui-content p.center {
+    text-align: center;
+}
+
+.ui-content .ui-listview {
+    background-color: #eee;
+    margin: 1em 0em;
+}
+
+.ui-content .ui-listview li {
+    background-color: #C22320;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.ui-content #profileOutput li {
+    text-transform: none;
+}
+
+.ui-content #profileOutput .ui-listview li.ui-li-divider {
+    text-transform: uppercase;
+}
+
+.ui-content .ui-listview li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.ui-content .ui-listview ul,.ui-content .ui-listview ul li,.ui-content .ui-listview li.ui-li-divider {
+    background-color: #010609;
+}
+
+.ui-content .ui-listview ul li a {
+    font-size: 1em;
+}
+
+.ui-content .ui-collapsible-content>.ui-listview {
+    margin: -.5em -1em;
+}
+
+.ui-content table {
+    border-collapse: collapse;
+}
+
+.ui-content table th {
+    background-color: #C22320;
+    color: #fff;
+}
+
+.ui-content table td {
+    font-size: .9em;
+    color: #000;
+}
+
+.ui-content tr {
+    background-color: #eee;
+}
+
+.ui-content tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+.ui-table-columntoggle-btn {
+    padding: .5em 2em;
+    background-color: #C22320;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    visibility: hidden;
+}
+
+.ui-input-btn,.ui-btn.signupbtn, .tablebtn {
+    background-color: #C22320;
+    color: #fff;
+}
+
+.ui-btn.signupbtn, .playlgetable {
+    background-color: #010609;
+}
+
+.ui-content input[type=text],.ui-content input[type=password],.ui-content input[type=email],.ui-content select,.ui-content input[type=number],.ui-content input[type=tel] {
+    padding: 1em;
+    color: #fff;
+    font-size: 1em;
+}
+
+.ui-input-text,.ui-select {
+    border: solid 1px #aaa;
+}
+
+.ui-header .ui-title {
+    padding: .5em 0;
+    margin: 0 20%;
+}
+
+.ui-panel {
+    background-color: #222;
+    background-image: url(../images/2.jpg);
+    background-repeat: repeat;
+}
+
+.ui-panel .ui-listview li {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.ui-panel .ui-listview li a {
+    color: #fff;
+    border-color: #999;
+}
+.ui-panel .ui-listview {
+    margin-top: 2em;
+}
+.ui-panel h2 {
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: -0.9em -0.9em 0;
+    padding: .75em;
+    background-color: #000;
+}
+
+.ui-panel-wrapper {
+    background-color: #333;
+    background-image: url(../images/1.jpg);
+    background-repeat: repeat;
+    -webkit-box-shadow: 5px 0 5px 0 rgba(0,0,0,0.7);
+    box-shadow: 5px 0 5px 0 rgba(0,0,0,0.7);
+    padding-bottom: 80px;
+}
+
+.ui-listview>li h2 {
+    margin: 0 !important;
+}
+
+#liveviewoutput #table {
+    margin-bottom: 1em;
+}
+
+#liveviewoutput td {
+    font-size: 2em;
+}
+
+#liveviewoutput .marquee,#liveviewoutput #next {
+    padding: 1em;
+    background-color: #C22320;
+    color: #fff;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#liveviewoutput #next {
+    background-color: #010609;
+}
+
+.ui-table-reflow.ui-responsive {
+    display: inline-table;
+}
+
+#addLeagueForm h2 {
+    background-color: #333;
+    padding: 10px;
+}
+
+#addLeagueForm h2.active {
+    background-color: #010609;
+}
+#addLeagueForm ul h2 {
+    background-color: inherit;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 1em;
+}
+.ui-content .ui-listview-inset, .ui-panel-inner>.ui-listview-inset {
+    margin: 1em 0;
+}
+.ui-content #addLeagueForm p,.ui-input-text,.ui-input-search {
+    margin-top: 0;
+}
+.ui-icon-loading {
+    background: url(images/ajax-loader.gif);
+    background-size: 2.875em 2.875em;
+}
+.ui-content hr {
+    margin-bottom: 1em;
+}
+
+#addLeague2,h2.step2, #addLeague1,h2.step1, .ui-table-columntoggle-btn {
+    display: none;
+}
+
+#addLeague1,#addLeague2 {
+    margin-top: 1em;
+}
+
+/* Buttons
+ -----------------------------------------------------------------------------------------------------------*/
+.ui-btn,label.ui-btn {
+    font-weight: 700;
+}
+
+.ui-select .ui-btn {
+    font-weight: 400;
+    text-align: left;
+}
+
+.ui-btn:link {
+    text-decoration: none !important;
+}
+
+.ui-btn-active {
+    cursor: pointer;
+}
+
+.ui-btn-icon-left:after,.ui-btn-icon-right:after,.ui-btn-icon-top:after,.ui-btn-icon-bottom:after,.ui-btn-icon-notext:after {
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.ui-listview>li p {
+    white-space: normal;
+}
+
+.grid-menu {
+    width: 100%;
+    margin-top: 0px;
+    height:90%;
+    display:block;
+    position:absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom:0;
+    overflow:hidden;
+}
+
+.float-left {
+    float: left;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.grid-menu-item {
+    width: 49%;
+    height: 36%;
+    min-width: 92px;
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    text-align: center;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.3);
+    display: inline-block;
+    margin-bottom: 4px;
+    text-decoration: none;
+}
+
+.grid-menu-item:first-child {
+}
+
+.grid-menu-item i {
+    margin-top: 40px;
+    font-size: 40px;
+    opacity: 1;
+}
+
+.grid-menu-item-label {
+    margin-top: 17%;
+    font-size: 18px;
+}
+
+.grid-menu-list-item-left {
+    width: 90%;
+    opacity:1;
+}
+
+.grid-menu-list-item-right {
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    right: 16px;
+    width: 80px;
+    font-size: 20px;
+    opacity: 1;
+    text-align: right;
+    line-height: 44px;
+}
+.Android .androidhide {
+    display: none;
+}
+.ui-table th, .ui-table td {
+    line-height: 1.25em;
+    text-align: left;
+    padding: 1em .5em;
+    vertical-align: middle;
+}
+.ui-content table th {
+    padding: 0.5em;
+}
+.ui-table td small {
+    width: 100%;
+    float: left;
+    color: #C22320;
+    font-size: 0.6em;
+}
+.ui-content table td, .ui-content table th {
+    font-size: 1em;
+}
+.ui-content table td.teamname {
+    font-weight: bold;
+}
+ui-table-columntoggle-btn {
+    display:none;
+}
+#viewfixtures .ui-table td, #viewfixtures .ui-table th {
+    text-align: center;
+}
+#playleague .ui-input-text {
+    width: 30%;
+    margin: 0 auto;
+}
+#playleague .ui-input-text input {
+    padding: 0.3em;
+}
+.score, #playleague label {
+    font-family: scoreboard;
+}
+.homeplay {
+    background-color: rgba(195,35,32,0.2);	
+    padding: 2em;
+}
+.awayplay {
+    background-color: rgba(0,0,0,0.2);
+    padding: 2em;
+}
+.addbtn {
+    margin-top: 0;
+}
+.addbtn .ui-btn { 
+    font-family:scoreboard;
+    font-size: 1.5em;
+}
+.playfixture, .delgame {
+    background-color: #C22320;
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+    .hideiphone {
+        display: none !important;
+    }
+    
+}

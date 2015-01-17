@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+            <meta content="telephone=no" name="format-detection">
+                <meta content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" name="viewport">
+                    <link href="css/jquery.mobile.icons-1.4.4.min.css" rel="stylesheet">
+                        <link href="css/jquery.mobile.structure-1.4.4.min.css" rel="stylesheet">
+                            <link href="css/newtheme.css" rel="stylesheet">
+                                <link href="css/mobile.css" rel="stylesheet" type="text/css">
+                                    <link href="css/jQMProgressBar.css" rel="stylesheet" type="text/css">
+                                        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+                                            <title>Lounge Mo.de</title>
+    </head>
+    
+    <body class="body">
+        <div data-dismissible="true" class="ui-panel-closed" data-display="overlay" data-position="right" data-position-fixed="true" data-role="panel" data-swipe-close="true" data-theme="a" id="nav-panel">
+            <h2>Menu</h2>
+            <ul data-role="listview">
+                
+                <li data-icon="delete"><a data-rel="close">Close menu</a>
+                </li>
+                
+                <li><a href="#league">View Leagues</a>
+                </li>
+                
+                <li><a href="#addleague" class="addleaguebtn">Add League</a>
+                </li>
+                
+                <li class="androidhide"><a href="#buyleagues">Buy Leagues</a>
+                </li>
+                
+                <li><a class="logout">Log Out</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div data-role="page" id="login">
+            <div data-position="fixed" data-role="header" data-tap-toggle="false">
+                <h1><img src="images/logo.png"></h1>
+            </div>
+            
+            <div data-role="content">
+                <h1>Login/Sign Up</h1>
+                <p class="center">Welcome to LoungeMo.de, the best way to play competitive football leagues with your friends.</p>
+                
+                <p class="center">Please log in or sign up below.</p>
+                
+                <form data-ajax="false" id="loginForm" name="loginForm">
+                    <p>
+                    <input id="usernamelogin" name="username" autocapitalize="off" autocorrect="off" placeholder="Email Address" type="email">
+                        </p>
+                        
+                        <p>
+                        <input id="passwordlogin" autocapitalize="off" autocorrect="off" name="password" placeholder="Password" type="password">
+                            </p>
+                            
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <input type="submit" value="Login">
+                                        </div>
+                                
+                                <div class="ui-block-b">
+                                    <a class="ui-btn signupbtn" href="#signup">Sign Up</a>
+                                </div>
+                            </div>
+                            </form>
+            </div>
+        </div>
+        
+        <div data-role="page" id="testpage">
+            <div data-position="fixed" data-role="header" data-tap-toggle="false">
+                <a data-icon="arrow-l" data-iconpos="notext" data-theme="b" href="#league">Back</a>
+                
+                <h1><img src="images/logo.png"></h1>
+                
+                <a class="ui-btn-right" data-icon="bars" data-iconpos="notext" href="#nav-panel">Menu</a>
+            </div>
+            
+            <div data-role="content">
+                <h1>League Name</h1>
+                <div class="grid-menu">
+                    <a href="#league" class="grid-menu-item">
+                        <i class="fa fa-bar-chart"></i>
+                        <div class="grid-menu-item-label">League Table</div>
+                    </a>
+                    <a href="#league" class="grid-menu-item list__item--tappable">
+                        <i class="fa fa-calendar"></i>
+                        <div class="grid-menu-item-label">Fixtures / Results</div>
+                    </a>
+                    
+                    <a href="#league" class="grid-menu-item list__item--tappable">
+                        <i class="fa fa-futbol-o"></i>
+                        <div class="grid-menu-item-label">Play League</div>
+                    </a>
+                    <a href="#league" class="grid-menu-item list__item--tappable">
+                        <i class="fa fa-cogs"></i>
+                        <div class="grid-menu-item-label">Options</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div data-role="page" id="addleague">
+            <div data-position="fixed" data-role="header" data-theme="a" data-tap-toggle="false">
+                <a data-icon="arrow-l" data-iconpos="notext" data-theme="b" href="#league">Back</a>
+                
+                <h1><img src="images/logo.png"></h1>
+                
+                <a class="ui-btn-right" data-icon="bars" data-iconpos="notext" href="#nav-panel">Menu</a>
+            </div>
+            
+            <div data-role="content" id="addleagueinner">
+                <h1>Add League</h1>
+                
+                <p class="center">Please complete all fields below to create your league.</p>
+                
+                <div id="addLeague0">
+                    <h2 class="step0 active">Step 1</h2>
+                    
+                    <p class="center">What type of league do you want to play?</p>
+                    <ul data-role="listview" data-inset="true">
+                        <li>
+                            <a href="#" class="lsel" rel="1">
+                                <h2>One-on-one League</h2>
+                                <p><strong>Find out who is the best in a one-on-one session</strong>
+                                </p>
+                                <p>Pit your whits against a friend and play for as long as you need to keeping track of scores along the way.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="lsel" rel="2">
+                                <h2>Fixture Generator</h2>
+                                <p><strong>Play a traditional season</strong>
+                                </p>
+                                <p>This option allows you to select number of teams and the amount of times each team plays each other. We then generate a fixture list for the season.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="lsel" rel="3">
+                                <h2>Free Form</h2>
+                                <p><strong>Ad-hoc style play</strong>
+                                </p>
+                                <p>Select the number of teams then you can add results on a game by game basis with no set fixture list.</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <form data-ajax="false" id="addLeagueForm" autocapitalize="words" name="addLeagueForm">
+                    <h2 class="step1">Step 2</h2>
+                    <div id="addLeague1">
+                        <p>
+                        <input id="leagueName" name="leagueName" placeholder="Name your league" type="text">
+                            </p>
+                            
+                            <p>
+                            <input id="leagueTeams" name="leagueTeams" pattern="[0-9]*" placeholder="Number of teams" type="text">
+                                </p>
+                                <input type="hidden" name="leagueType" id="leagueType" value="" />
+                                <p>
+                                <select id="leaguePlays" name="leaguePlays">
+                                    <option disabled="disabled" selected="selected">
+                                        Play each other...
+                                    </option>
+                                    
+                                    <option value="1">
+                                        Once
+                                    </option>
+                                    
+                                    <option value="2">
+                                        Twice
+                                    </option>
+                                    
+                                    <option value="3">
+                                        Three Times
+                                    </option>
+                                    
+                                    <option value="4">
+                                        Four Times
+                                    </option>
+                                </select>
+                                </p>
+                                
+                                <div class="warning"></div>
+                                
+                                <p>
+                                <input id="addLeagueForm1Submit" type="button" value="Next Step">
+                                    </p>
+                                    </div>
+                    
+                    <h2 class="step2">Step 3</h2>
+                    
+                    <div id="addLeague2">
+                        <p>Please add team details first.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div data-role="page" id="viewfixtures">
+            <div data-position="fixed" data-role="header" data-tap-toggle="false">
+                <a data-icon="arrow-l" data-iconpos="notext" data-theme="b" href="#league">Back</a>
+                
+                <h1><img src="images/logo.png"></h1><a class="ui-btn-right" data-icon="bars" data-iconpos="notext" href="#nav-panel">Menu</a>
+            </div>
+            <div data-role="content" id="leaguefixturesoutput">
+                <h1 class="leagueName">League Table</h1>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a class="ui-btn tablebtn viewfixtable viewleague" href="#viewfixtures">View Table</a>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <a class="ui-btn tablebtn playlgetable playleague" href="#playleague">Play League</a>
+                    </div>
+                </div>
+                <table data-role="table" id="fixture-table" data-mode="columntoggle" class="ui-responsive table-stripe ui-body-d ui-bar-d">
+                    <thead>
+                        <tr>
+                            <th width="35%">Home</th>
+                            <th width="5%"></th>
+                            <th width="35%">Away</th>
+                            <th width="20%">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fixturebody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div data-role="page" id="league">
+            <div data-position="fixed" data-role="header" data-tap-toggle="false" data-theme="a">
+                <a data-icon="refresh" data-iconpos="notext" data-theme="b" href="#" id="refreshLeagues" rel="external">Refresh</a>
+                
+                <h1><img src="images/logo.png"></h1><a class="ui-btn-right" data-icon="bars" data-iconpos="notext" href="#nav-panel">Menu</a>
+            </div>
+            
+            <div data-role="content">
+                <h1>Your Leagues</h1>
+                
+                <p class="center">Please select one of your leagues to view more options.</p>
+                
+                <ul class="listLeagues" data-inset="false" data-role="listview" data-theme="d"></ul>
+                 <div class="ui-grid-solo">
+                <div class="ui-block-a">
+                    <p>You currently have <span class="userCredits"></span> credits remaining</p>
+                </div>
+            </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a class="ui-btn ui-input-btn addleaguebtn" href="#addleague">Add League</a>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <a class="ui-btn signupbtn" href="#buyleagues">Buy Credits</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div data-role="page" id="playleague">
+            <div data-position="fixed" data-role="header">
+                <a data-icon="arrow-l" data-iconpos="notext" data-theme="b" href="#league">Back</a>
+                
+                <h1><img src="images/logo.png"></h1><a class="ui-btn-right" data-icon="bars" data-iconpos="notext" href="#nav-panel">Menu</a>
+            </div>
+            
+            <div data-role="content">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a class="ui-btn tablebtn viewfixtable viewleague" href="#viewfixtures">View Table</a>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <a class="ui-btn tablebtn playlgetable viewfixtures" href="#playleague">View Fixtures</a>
+                    </div>
+                </div>
+                <form data-ajax="false" id="playLeague" name="playLeague"></form>
+            </div>
+        </div>
+        
+        <div data-role="page" id="syncdata">
+            <div data-position="fixed" data-role="header">
+                <a data-icon="arrow-l" data-iconpos="notext" data-theme="b" href="#league">Back</a>
+                
+                <h1><img src="images/logo.png"></h1><a class="ui-btn-right" data-icon="bars" data-iconpos="notext" href="#nav-panel">Menu</a>
+            </div>
+            
+            <div data-role="content">
+                <h1>Syncing Data</h1>
+                <div id="progressbar"></div>
+            </div>
+        </div>
+        
+        <div data-role="page" id="viewleague">
+            <div data-position="fixed" data-role="header">
+                <a data-icon="arrow-l" data-iconpos="notext" data-theme="b" href="#league">Back</a>
+                
+                <h1><img src="images/logo.png"></h1><a class="ui-btn-right" data-icon="bars" data-iconpos="notext" href="#nav-panel">Menu</a>
+            </div>
+            
+            <div data-role="content" id="leaguetableoutput">
+                <h1 class="leagueName">League Table</h1>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a class="ui-btn tablebtn viewfixtable viewfixtures" href="#viewfixtures">Fixtures</a>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <a class="ui-btn tablebtn playlgetable playleague" href="#playleague">Play League</a>
+                    </div>
+                </div>
+                <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="a" data-column-btn-text="Columns" data-column-popup-theme="a">
+                    
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th width="10%">P</th>
+                            <th width="10%" data-priority="1">W</th>
+                            <th width="10%" data-priority="1">D</th>
+                            <th width="10%" data-priority="1">L</th>
+                            <th width="10%">G</th>
+                            <th width="10%">P</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leagueTableInner">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div data-role="page" id="signup">
+            <div data-position="fixed" data-role="header" data-tap-toggle="false">
+                <a data-icon="arrow-l" data-iconpos="notext" data-theme="b" href="#league">Back</a>
+                
+                <h1><img src="images/logo.png"></h1>
+            </div>
+            
+            <div data-role="content">
+                <h1>Sign Up</h1>
+                
+                <p class="center">Please complete all fields below to create your account.</p>
+                
+                <form data-ajax="false" id="signupForm" name="signupForm">
+                    <p>
+                    <input id="userEmail" name="userEmail" placeholder="Email Address" type="email">
+                        </p>
+                        <p>
+                        <input id="userPass" name="userPass" placeholder="Password" type="password">
+                            </p>
+                            <p>
+                            <input type="submit" id="signupsubmit" value="Sign Up">
+                                </p>
+                                </form>
+            </div>
+        </div>
+        
+        
+        <div data-role="page" id="offline">
+            <div data-position="fixed" data-role="header" data-tap-toggle="false">
+                <h1><img src="images/logo.png"></h1>
+            </div>
+            
+            <div data-role="content">
+                <h1>Offline</h1>
+                
+                <p>Your phone is currently offline so this app cannot function.</p>
+            </div>
+        </div>
+        
+        <div data-role="page" id="buyleagues">
+        <div data-position="fixed" data-role="header">
+            <a data-icon="arrow-l" data-iconpos="notext" data-theme="b" href="#league">Back</a>
+
+            <h1><img src="images/logo.png"></h1><a class="ui-btn-right" data-icon="bars" data-iconpos="notext" href="#nav-panel">Menu</a>
+        </div>
+
+        <div data-role="content">
+            <h1>Buy Leagues</h1>
+
+            <ul data-inset="false" data-role="listview" data-theme="d" id="in-app-purchase-list"></ul>
+        </div>
+    </div>
+        
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery.mobile-1.4.4.min.js"></script>
+        <script src="js/jQMProgressBar.js"></script>
+        <script src='js/fastclick.js' type='application/javascript'></script>
+        <script src="js/iap.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            app.initialize();
+            </script>
+    </body>
+    
+</html>
