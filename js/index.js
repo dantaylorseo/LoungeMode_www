@@ -1174,7 +1174,23 @@ onDeviceReady: function() {
                data: 'user='+user,
                success: function(data) {
                console.log(data);
-               var total = data.games.length + data.leagues.length + data.teams.length + data.results.length;
+               var gamet = 0;
+               var leaguet = 0;
+               var teamt = 0;
+               var resultt = 0;
+               if (typeof data.games.length !== "undefined") {
+                   gamet = data.games.length;
+               }
+                   if (typeof data.leagues !== "undefined") {
+                   gamet = data.leagues.length;
+               }
+                   if (typeof data.teams !== "undefined") {
+                   gamet = data.teams.length;
+               }
+                   if (typeof data.results !== "undefined") {
+                   gamet = data.results.length;
+               }
+               var total = gamet + leaguet + teamt + resultt;
                console.log(total);
                var pbar = jQMProgressBar('progressbar')
                .setOuterTheme('a')
